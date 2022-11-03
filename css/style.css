@@ -1,0 +1,116 @@
+*, ::before, ::after {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-family: 'Libre Baskerville', serif;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.container {
+  min-height: 100vh;
+  height: 100%;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: #222;
+}
+
+.container .links {
+  min-height: 500px;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.container .links .link {
+  cursor: pointer;
+  width: 70%;
+  aspect-ratio: 7/4;
+  border: none;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .container .links .link {
+    width: 67%;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container .links .link {
+    width: 40%;
+  }
+}
+
+.banner {
+  width: 100%;
+  aspect-ratio: 5/1;
+  background-color: rgba(0, 0, 0, 0.2);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.banner span {
+  color: white;
+  letter-spacing: 0.4rem;
+  font-weight: lighter;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .banner span {
+    font-size: 1.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .banner span {
+    font-size: 2rem;
+  }
+}
+
+#feature {
+  background-image: url("/assets/ABC_5916.jpg");
+}
+
+#highlight {
+  background-image: url("/assets/DSC08841.jpg");
+}
+
+#gallery {
+  background-image: url("/assets/ABC_5886.jpg");
+}
+/*# sourceMappingURL=style.css.map */

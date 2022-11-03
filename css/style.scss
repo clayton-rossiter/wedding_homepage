@@ -1,0 +1,106 @@
+*, ::before, ::after {
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+
+$screen-xs: 320px;
+$screen-sm: 480px;
+$screen-md: 768px;
+$screen-lg: 1024px;
+$screen-xl: 1920px;
+@mixin phone {
+    @media (min-width: #{$screen-sm}) and (max-width: #{$screen-md - 1px}) {
+      @content;
+    }
+}
+@mixin tablet {
+    @media (min-width: #{$screen-md}) and (max-width: #{$screen-lg - 1px}) {
+      @content;
+    }
+}
+@mixin desktop {
+  @media (min-width: #{$screen-lg}) {
+      @content;
+    }
+}
+
+body {
+    font-family: 'Libre Baskerville', serif;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+.container {
+    min-height: 100vh;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #222;
+
+    .links {
+        min-height: 500px;
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 2rem;
+
+        .link {
+        // background-color: blue;
+        cursor: pointer;
+        width: 70%;
+        aspect-ratio: 7/4;
+        border: none;
+        background-repeat: no-repeat;
+        background-size: cover;
+            
+
+            @include tablet {
+                width: 67%;
+            }
+
+            @include desktop {
+                width: 40%;
+            }
+        }
+    }
+}
+
+.banner {
+    width: 100%;
+    aspect-ratio: 5/1;
+    background-color: rgba(0,0,0,0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    span {
+        color: white;
+        letter-spacing: 0.4rem;
+        font-weight: lighter;
+        text-transform: uppercase;
+        font-size: 0.9rem;
+
+        @include tablet {font-size: 1.5rem;}
+        @include desktop {font-size: 2rem;}
+    }
+}
+
+#feature {
+    background-image: url("/assets/ABC_5916.jpg");
+}
+#highlight {
+    background-image: url("/assets/DSC08841.jpg");
+}
+#gallery {
+    background-image: url("/assets/ABC_5886.jpg");
+}
